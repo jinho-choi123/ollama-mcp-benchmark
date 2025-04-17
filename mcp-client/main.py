@@ -6,6 +6,11 @@ from llama_index.llms.ollama import Ollama
 import os
 from langchain.prompts import PromptTemplate
 
+# Configuration variables
+MCP_URL = os.environ.get("MCP_URL", "http://localhost:8000/sse")
+MODEL_NAME = os.environ.get("LLM_MODEL", "gemma3:27b")
+TEMPERATURE = float(os.environ.get("LLM_TEMPERATURE", "0.7"))
+
 # Flight search prompt template with detailed formatting guidelines
 BRAVE_SEARCH_PROMPT = PromptTemplate.from_template(
     """You are a helpful filesystem managing assistant.
@@ -28,10 +33,7 @@ Question: {input}
 Thought: """
 )
 
-# Configuration variables
-MCP_URL = os.environ.get("MCP_URL", "http://localhost:8000/sse")
-MODEL_NAME = os.environ.get("LLM_MODEL", "gemma3:27b")
-TEMPERATURE = float(os.environ.get("LLM_TEMPERATURE", "0.7"))
+
 
 async def setup_agent():
     """Setup and return the filesystem managing agent"""
