@@ -8,7 +8,7 @@ from langchain.prompts import PromptTemplate
 
 # Configuration variables
 MCP_URL = os.environ.get("MCP_URL", "http://localhost:8000/sse")
-MODEL_NAME = os.environ.get("LLM_MODEL", "gemma3:27b")
+MODEL_NAME = os.environ.get("LLM_MODEL", "gemma3:12b")
 TEMPERATURE = float(os.environ.get("LLM_TEMPERATURE", "0.7"))
 
 # Flight search prompt template with detailed formatting guidelines

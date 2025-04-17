@@ -11,9 +11,9 @@ LLM Client that acts as a MCP Client. To check the GPU usage, we are running who
 ```bash
 $ ollama serve
 ```
-2. Install the model weights(gemma3:27b by default)
+2. Install the model weights(gemma3:12b by default)
 ```bash
-$ ollama pull gemma3:27b
+$ ollama pull gemma3:12b
 ```
 3. Run the MCP client.
 ```bash
